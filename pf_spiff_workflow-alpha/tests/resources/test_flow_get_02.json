@@ -1,0 +1,31 @@
+{
+    "task_specs": {
+        "Start": {
+            "class": "SpiffWorkflow.specs.StartTask.StartTask",
+            "manual": false,
+            "outputs": [
+                "task_under_test"
+            ]
+        },
+        "task_under_test": {
+            "class": "pf_spiff_workflow.specs.Rest.GetRequest",
+            "name": "task_under_test",
+            "inputs": [
+                "Start"
+            ],
+            "url": "http://someurl.com",
+            "filters": {
+                "filter_1": "test_1"
+            },
+            "body": {
+                "parameter_1": "test_1"
+            },
+            "header": {
+                "header_1": "test_1"
+            }
+        }
+    },
+    "description": "",
+    "file": null,
+    "name": ""
+}
